@@ -1,0 +1,14 @@
+<h4>Client View</h4>
+<div class="col-sm-12">
+    <button routerLink="/docs">Go to staff</button>
+  <div class="col-sm-4">
+    <ul>
+      <li *ngFor="let data of clientData">
+        <P><label>Name:</label>{{ data.name }}</P>
+        <P><label>Project:</label>{{data.project}}</P>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+

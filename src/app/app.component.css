@@ -1,0 +1,14 @@
+.nobtmmargin{
+ margin-bottom: 0;
+}
+.nomarleft{
+    margin-left: 0px;
+}
+.logostyle{
+    height: 50px;
+    float: left;
+}
+.routeStyle{
+    top: 61px;
+    position: relative;
+}

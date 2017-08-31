@@ -1,0 +1,38 @@
+<div *ngIf="!name; else forminfo">
+ <form [formGroup]="reactiveForm" (ngSubmit)="save(reactiveForm.value)">
+    <div class="col-sm-4 col-sm-offset-4 well">
+      <div class="page-header col-md-12 text-center"><b>Reactive Form</b></div>
+      <div class="col-sm-12 form-group">
+        <label for="name">Name:</label>
+        <!-- This goes underneath the Name label -->
+        <input type="text" class="form-control" formControlName="name">
+        <div class="alert" *ngIf="!reactiveForm.controls['name'].valid && reactiveForm.controls['name'].touched">{{ titleAlert }}</div>
+      </div>
+
+      <div class="col-sm-12 form-group">
+        <label for="name">Description:</label>
+        <!-- This goes underneath the Description label -->
+        <input type="text" class="form-control" formControlName="description">
+        <div class="alert" *ngIf="!reactiveForm.controls['description'].valid && reactiveForm.controls['description'].touched">You must specify a description that's between 3 and 5 characters.</div>
+      </div>
+
+      <div class="col-sm-12 form-group">
+        <label for="validate">Minimum of 2 Characters</label>
+        <input type="checkbox" name="validate" formControlName="validate" value="1"> On
+      </div>
+
+      <div class="col-sm-12 form-group">
+        <input type="submit" class="btn btn-success" value="Submit Form" [disabled]="!reactiveForm.valid">
+      </div>
+    </div>
+ </form>
+</div>
+
+<ng-template #forminfo>
+  <div class="form-container">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h1>{{ name }}</h1>
+      <p>{{ description }}</p>
+    </div>
+  </div>
+</ng-template>

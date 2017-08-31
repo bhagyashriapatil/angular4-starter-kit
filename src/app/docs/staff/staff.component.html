@@ -1,0 +1,14 @@
+<h4>Staff View</h4>
+<div class="col-sm-12">
+  <button routerLink="/docs/client">Go to client</button>
+  <div class="col-sm-4">
+    <ul>
+      <li *ngFor="let data of staffData">
+        <p>{{ data.name }}
+        <button (click)="showClient(data)" class="btn btn-info">Suggested Cient?</button>
+        </p>
+      </li>
+      
+    </ul>
+  </div>
+</div>

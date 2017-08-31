@@ -1,0 +1,34 @@
+<div class="col-sm-4 col-sm-offset-4 well">
+  <div class="page-header col-md-12 text-center"><b>Login</b> </div>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="col-sm-12 form-group">
+        <label>Email:</label>
+        <input type="text" class="form-control" [(ngModel)]="loginForm.email" #email="ngModel" name="email" placeholder="email" required>
+        <div [hidden]="email.valid||email.pristine" class="alert-danger">
+          Email is required
+        </div>
+      </div>
+      <div class="col-sm-12 form-group">
+        <label>Password:</label>
+        <input type="text" class="form-control" [(ngModel)]="loginForm.pwd" maxlength="10" minlength="4" #pwd="ngModel" name="pwd" placeholder="password" required>
+        <!--<div [hidden]="pwd.valid||pwd.pristine" class="alert-danger">
+          Password is required  
+        </div>-->
+        <div *ngIf="pwd.invalid && (pwd.dirty||pwd.touched)" class="alert-danger">
+          <div *ngIf="pwd.errors.required">
+            Password is required
+          </div>
+          <div *ngIf="pwd.errors.minlength">
+            Password must be at least 4 characters long.
+          </div>
+          <div *ngIf="pwd.errors.maxlength">
+            Password not longer than 16 characters long.
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 form-group text-center">
+        <button type="submit" class="btn btn-info" [disabled]="loginForm.invalid">Login</button>
+      </div>
+    </form>
+</div>
+

@@ -1,0 +1,24 @@
+<div class="col-md-4 col-md-offset-4 well hoverwell">
+<form #loginForm ="ngForm" (ngSubmit)="login(data)" novalidate autocomplete="off">
+  <div class="page-header col-md-12 text-center"><b>Login</b> </div>
+  <div class="col-md-12 form-group">
+    <input type="text" [(ngModel)]="data.emailField" name="emailField" email #emailField="ngModel" class="form-control"  placeholder="Email" required="" autofocus />
+    <div *ngIf="emailField.dirty && emailField.invalid">
+      <span [hidden]="!emailField.errors?.required" class="pull-right text-danger"><b>Required</b></span>
+      <span [hidden]="!emailField.errors?.email" class="pull-right text-danger"><b>Not valid email</b></span>
+    </div>
+  </div>
+
+  <div class="col-md-12 form-group">
+    <input type="password" [(ngModel)]="data.password" minlength="5" maxlength="10" #password="ngModel" name="password" class="form-control"  placeholder="password" required="" />
+    <div *ngIf="password.dirty && password.invalid">
+      <span [hidden]="!password.errors?.required" class="pull-right text-danger"><b>Required</b></span>
+      <span [hidden]="!password.errors?.minlength" class="pull-right text-danger"><b>minimum 5 digit</b></span>
+    </div>
+  </div>
+  <div class="form-group col-md-12 text-center">
+    <button type="submit" class="btn btn-info" [disabled]="loginForm.invalid">Login</button>
+  </div>
+   <a routerLink="/signup"> <button class="col-md-12 btn btn-link pull-right">Create new account....</button></a>
+</form>
+</div>

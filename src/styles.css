@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: rgba(9, 101, 111, 0.87);
+}
+
+.fc-card {
+  background: white;
+  padding: 20px;
+  box-shadow: 1px 1px 12px #676767;
+  border-radius: 8px;
+} 
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #969696;
+}
+
+.fc-top-17 {
+  top: 17px;
+  position: relative;
+}
+
+.has-danger .form-control{
+  border: 1px solid red;
+}
+
+.form-control-feedback{
+  position: absolute;
+  top: 19px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: initial;
+  /* height: 34px; */
+  /* line-height: 34px; */
+  text-align: left;
+  pointer-events: none;
+}
+.nomartop{
+  margin-top: 0px;
+}
+.mt10{
+  margin-top: 10px;
+}
