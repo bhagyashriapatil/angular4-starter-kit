@@ -15,6 +15,7 @@ export class LoginService {
   }
 
   setEmpList(data):Observable<any>{
+    // console.log("data in loginService",data)
     let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers }); // Create a request option
     return this.http.post('http://localhost:3002/signUp', data, options)
@@ -70,7 +71,6 @@ export class LoginService {
   }
 
   fetchUserId(data):Observable<any>{
-    console.log("post user id",data);
     let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers }); // Create a request option
     return this.http.post('http://localhost:3002/viewUser', data, options)

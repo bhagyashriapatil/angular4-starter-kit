@@ -10,18 +10,29 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ViewUserComponent implements OnInit {
   
   userList: Array<any>;
+  isValidUser: object;
 
-  constructor(private loginService:LoginService, private route:ActivatedRoute) {
-    // this.loginService.getUsers()
-    // .subscribe(res=>{
-    //   console.log("viewUser data",res.users);
-    //  })
+  constructor(private loginService:LoginService, private router:Router, private route:ActivatedRoute) {
+
   }
 
+  save(recvdata){
+    // console.log("recvdata",recvdata);
+    this.loginService.setEmpList(recvdata);
+    this.router.navigate(['home']);
+  }
+// 
   ngOnInit() {
     let userId = this.route.snapshot.params['id'];
-    console.log("userId",userId);
-    this.loginService.fetchUserId(userId);
+    this.loginService.getUsers()
+    .subscribe(res=>{
+      this.isValidUser = res.find((obj,index,array)=>{
+        if(index==userId){
+          return obj;
+        }
+      })
+    })
+
   }
 
 }

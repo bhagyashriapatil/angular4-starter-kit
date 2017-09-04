@@ -41,6 +41,7 @@ export class HomeComponent implements OnInit {
     
     // here we modify observable and use async pipe, without subscribe we directly bind data to html
     this.userList = this.loginService.getUsers();
+    console.log("this.userList",this.userList);
 
     // here we use subscribe and then use of response
     // this.loginService.getUsers()
