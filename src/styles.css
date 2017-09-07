@@ -44,3 +44,14 @@ body {
 .mt10{
   margin-top: 10px;
 }
+/* home component css start */
+.popover.top {
+  margin-top: -29px;
+}
+.popover-content {
+  padding: 0px 14px;
+}
+/* home component css end */
+.dispblock{
+  display: block;
+}

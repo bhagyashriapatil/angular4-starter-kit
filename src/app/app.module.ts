@@ -4,6 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule }  from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+// import { NgxModule } from './ngx/ngx.module';
+import { PopoverModule } from 'ngx-bootstrap';
+import { TooltipModule } from 'ngx-bootstrap';
+import { ModalModule } from 'ngx-bootstrap';
+import { TypeaheadModule } from 'ngx-bootstrap';
+import { DatepickerModule } from 'ngx-bootstrap';
+import { CollapseModule } from 'ngx-bootstrap';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,6 +33,12 @@ import { ListResolver } from './list.resolver';
 import { LoginService } from './login/login.service';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { StarComponent } from './star/star.component';
+import { TooltipComponent } from './ngx-bootstrap-demo/tooltip/tooltip.component';
+import { ModalComponent } from './ngx-bootstrap-demo/modal/modal.component';
+import { ModalContentComponent } from './ngx-bootstrap-demo/modal/modal-content-component';
+import { TypeheadComponent } from './ngx-bootstrap-demo/typehead/typehead.component';
+import { DatepickerComponent } from './ngx-bootstrap-demo/datepicker/datepicker.component';
+import { CollapseComponent } from './ngx-bootstrap-demo/collapse/collapse.component';
 
 
 @NgModule({
@@ -39,10 +53,30 @@ import { StarComponent } from './star/star.component';
     FormvalidationComponent,
     ReactiveformComponent,
     ViewUserComponent,
-    StarComponent
+    StarComponent,
+    TooltipComponent,
+    ModalContentComponent,
+    ModalComponent,
+    TypeheadComponent,
+    DatepickerComponent,
+    CollapseComponent
+  ],
+  // when we use external component
+  // so it compile by angular so we nee to declare that compnent using entryComponent
+  entryComponents: [
+    ModalContentComponent
   ],
   imports: [
     BrowserModule,
+
+    // NgxModule,
+    PopoverModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    DatepickerModule.forRoot(),
+    CollapseModule.forRoot(),
+
     FormsModule,
     ReactiveFormsModule,
     DocsModule,

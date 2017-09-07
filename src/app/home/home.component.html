@@ -25,7 +25,10 @@
               <app-star [rating]="data.rating" (ratingClicked)="onRatingClicked($event)"></app-star>
             </td>
             <td><span><button class="btn btn-sm btn-success pull-left" (click)="update(data,index)">Update</button>
-              <button class="btn btn-sm btn-danger pull-right" (click)="delete(data,index)">Delete</button></span></td>
+              <button type="button" class="btn btn-sm btn-danger pull-right"
+               popover="Are you sure to Delete?"
+              popoverTitle="Popover on top"
+              placement="top" (click)="delete(data,index)" triggers="mouseenter:mouseleave">Delete</button></span></td>
           </tr>
     </tbody>  
   </table>

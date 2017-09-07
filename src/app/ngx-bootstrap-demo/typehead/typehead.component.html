@@ -1,0 +1,11 @@
+<div class="col-sm-4 col-sm-offset-4 well">
+  <form>
+      <div class="col-md-12 form-group">
+          <pre class="card card-block card-header">Model: {{selected | json}}</pre>
+          <input [(ngModel)]="selected"
+                 [typeahead]="district"
+                 class="form-control" name="district">
+      </div>          
+  </form>  
+</div>  
+

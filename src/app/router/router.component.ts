@@ -7,6 +7,13 @@ import { AboutComponent } from '../about/about.component';
 import { LoginComponent } from '../login/login.component';
 import { DocsComponent } from '../docs/doc/docs.component';
 import { SignupComponent } from '../signup/signup.component';
+
+import { TooltipComponent } from '../ngx-bootstrap-demo/tooltip/tooltip.component';
+import { ModalComponent } from '../ngx-bootstrap-demo/modal/modal.component';
+import { TypeheadComponent } from '../ngx-bootstrap-demo/typehead/typehead.component';
+import { DatepickerComponent } from '../ngx-bootstrap-demo/datepicker/datepicker.component';
+import { CollapseComponent } from '../ngx-bootstrap-demo/collapse/collapse.component';
+
 import { FormvalidationComponent } from '../formvalidation/formvalidation.component';
 import { ReactiveformComponent } from '../reactiveform/reactiveform.component';
 import { ViewUserComponent } from '../view-user/view-user.component';
@@ -20,6 +27,13 @@ export const appRoutes: Routes = [
   { path: 'viewUser/:id', component: ViewUserComponent},
   { path: 'fomvalidation', component: FormvalidationComponent, canActivate: [AuthguardGuard] },
   { path: 'reactiveform', component: ReactiveformComponent, canActivate: [AuthguardGuard] },
+
+  { path: 'tooltip', component: TooltipComponent },
+  { path: 'modal', component: ModalComponent },
+  { path: 'typehead', component: TypeheadComponent },
+  { path: 'datepicker', component: DatepickerComponent },
+  { path: 'collapse', component: CollapseComponent },
+  
   { path: 'about/:id', component: AboutComponent, canActivate: [AuthguardGuard] },
   { path: '',
     redirectTo: '/login',

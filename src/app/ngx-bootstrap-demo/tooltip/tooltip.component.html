@@ -1,0 +1,88 @@
+<!-- <button type="button" class="btn btn-default btn-secondary"
+tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+placement="top">
+Tooltip on top
+</button> -->
+
+<div class="col-md-8 col-md-offset-2 well">
+  <form>
+    <div class="page-header col-md-12 text-center"><b>Tooltip Demo</b> </div>
+
+    <div class="form-group col-sm-6">
+        <input type="text" tooltip="Email Field"
+        placement="left" class="form-control"  placeholder="Email" autofocus />
+    </div>
+
+    <div class="form-group col-sm-12">
+        <label>Dynamic Content</label>
+        <ng-template #tolTemplate>Just another: {{content}}</ng-template>
+        <button type="button" class="btn btn-warning" [tooltip]="tolTemplate">
+          TemplateRef binding
+        </button>
+      </div>    
+    
+      <div class="form-group col-sm-12">
+        <label>Dynamic Html</label>
+        <ng-template #popTemplate>Here we go: <div [innerHtml]="html"></div></ng-template>
+        <button type="button" class="btn btn-success"
+                [tooltip]="popTemplate" container="body">
+          Show me tooltip with html
+        </button>
+      </div>     
+
+      <div class="form-group col-sm-12">
+          <label>Here we set preconfigure defaults, which apply troughout the tootltips in component, Now code/btn fn commented becz it apply all</label>
+          <button type="button" class="btn btn-primary"
+          tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            Preconfigured tooltip
+         </button>
+      </div>
+
+      <div class="form-group col-sm-12">
+          <label>Custom Triggers</label>
+          <button type="button" class="btn btn-info"
+          tooltip="I will hide on click"
+          triggers="mouseenter:click" placement="top">
+          Hover over me!
+          </button>
+          <button type="button" class="btn btn-info"
+          tooltip="I will hide on mouseleave"
+          triggers="mouseenter:mouseleave" placement="right">
+          Hover over me!
+          </button>
+      </div>
+
+      <div class="form-group col-sm-12">
+          <label>Manual Triggering</label>
+          <p>
+              <span tooltip="Hello This text has attached tooltip"
+                    triggers="" #pop="bs-tooltip">
+              This text has attached tooltip
+              </span>
+            </p>
+            <button type="button" class="btn btn-success" (click)="pop.show()">
+              Show
+            </button>
+            <button type="button" class="btn btn-warning" (click)="pop.hide()">
+              Hide
+            </button>
+      </div>
+
+      <div class="form-group col-sm-12">
+          <label>component level styling, Here css commented bcz it apply to all</label>
+          <button type="button" class="btn btn-info"
+          tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          I have component level styling
+          </button>
+        </div> 
+
+        <div class="form-group col-sm-12">
+            <label>Not understand How to apply</label>
+            <button type="button" class="btn btn-primary"
+            tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." containerClass="customClass">
+            Demo with custom class
+            </button>
+        </div>  
+       
+  </form>
+</div>    

@@ -24,6 +24,9 @@ export class ViewUserComponent implements OnInit {
 // 
   ngOnInit() {
     let userId = this.route.snapshot.params['id'];
+
+    // this.loginService.fetchUserId(userId);
+
     this.loginService.getUsers()
     .subscribe(res=>{
       this.isValidUser = res.find((obj,index,array)=>{
