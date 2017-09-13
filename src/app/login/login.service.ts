@@ -70,10 +70,11 @@ export class LoginService {
     });
   }
 
-  fetchUserId(data):Observable<any>{
+  fetchUserId(index):Observable<any>{
+    console.log("index in fetchUserID",index);
     let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers }); // Create a request option
-    return this.http.post('http://localhost:3002/fetchId', data, options)
+    return this.http.get('http://localhost:3002/fetchLetId')
     .map(res => res.json())
     .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }

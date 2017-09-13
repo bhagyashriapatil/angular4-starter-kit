@@ -5,12 +5,9 @@ import { FormsModule, ReactiveFormsModule }  from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 // import { NgxModule } from './ngx/ngx.module';
-import { PopoverModule } from 'ngx-bootstrap';
-import { TooltipModule } from 'ngx-bootstrap';
-import { ModalModule } from 'ngx-bootstrap';
-import { TypeaheadModule } from 'ngx-bootstrap';
-import { DatepickerModule } from 'ngx-bootstrap';
-import { CollapseModule } from 'ngx-bootstrap';
+import { PopoverModule, TooltipModule, ModalModule, TypeaheadModule, CollapseModule,
+  CarouselModule, AccordionModule, AlertModule, ButtonsModule, BsDropdownModule, PaginationModule,
+  ProgressbarModule, SortableModule, TabsModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -39,6 +36,15 @@ import { ModalContentComponent } from './ngx-bootstrap-demo/modal/modal-content-
 import { TypeheadComponent } from './ngx-bootstrap-demo/typehead/typehead.component';
 import { DatepickerComponent } from './ngx-bootstrap-demo/datepicker/datepicker.component';
 import { CollapseComponent } from './ngx-bootstrap-demo/collapse/collapse.component';
+import { CarouselComponent } from './ngx-bootstrap-demo/carousel/carousel.component';
+import { AccordionComponent } from './ngx-bootstrap-demo/accordion/accordion.component';
+import { AlertsComponent } from './ngx-bootstrap-demo/alerts/alerts.component';
+import { ButtonComponent } from './ngx-bootstrap-demo/button/button.component';
+import { DropdownComponent } from './ngx-bootstrap-demo/dropdown/dropdown.component';
+import { PaginationComponent } from './ngx-bootstrap-demo/pagination/pagination.component';
+import { ProgressbarComponent } from './ngx-bootstrap-demo/progressbar/progressbar.component';
+import { SortableComponent } from './ngx-bootstrap-demo/sortable/sortable.component';
+import { TabsComponent } from './ngx-bootstrap-demo/tabs/tabs.component';
 
 
 @NgModule({
@@ -59,7 +65,16 @@ import { CollapseComponent } from './ngx-bootstrap-demo/collapse/collapse.compon
     ModalComponent,
     TypeheadComponent,
     DatepickerComponent,
-    CollapseComponent
+    CollapseComponent,
+    CarouselComponent,
+    AccordionComponent,
+    AlertsComponent,
+    ButtonComponent,
+    DropdownComponent,
+    PaginationComponent,
+    ProgressbarComponent,
+    SortableComponent,
+    TabsComponent
   ],
   // when we use external component
   // so it compile by angular so we nee to declare that compnent using entryComponent
@@ -74,8 +89,16 @@ import { CollapseComponent } from './ngx-bootstrap-demo/collapse/collapse.compon
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     TypeaheadModule.forRoot(),
-    DatepickerModule.forRoot(),
     CollapseModule.forRoot(),
+    CarouselModule.forRoot(),
+    AccordionModule.forRoot(),
+    AlertModule.forRoot(),
+    ButtonsModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    PaginationModule.forRoot(),
+    ProgressbarModule.forRoot(),
+    SortableModule.forRoot(),
+    TabsModule.forRoot(),
 
     FormsModule,
     ReactiveFormsModule,

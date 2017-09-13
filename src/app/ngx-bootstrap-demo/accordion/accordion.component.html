@@ -1,0 +1,12 @@
+<div class="col-sm-4 col-sm-offset-4">
+ <accordion>
+  <accordion-group #group>
+    <div accordion-heading>
+      Accordion
+      <i class="pull-right float-xs-right glyphicon"
+         [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+    </div>
+    Builds on top of the collapse directive to provide a list of items.
+  </accordion-group>
+ </accordion>
+</div>

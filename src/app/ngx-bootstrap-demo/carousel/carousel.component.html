@@ -1,0 +1,26 @@
+<div class="col-sm-4 col-sm-offset-4">
+  <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">
+    <slide>
+      <img src="assets/images/1.jpg" class="imgStyle" alt="First slide">
+      <div class="carousel-caption">
+        <h4>Slide {{activeSlideIndex}}</h4>
+        <!-- <p>{{slide.text}}</p> -->
+      </div>
+    </slide>
+    <slide>
+      <img src="assets/images/2.jpg" class="imgStyle" alt="Second slide">
+      <div class="carousel-caption">
+        <h4>Slide {{activeSlideIndex}}</h4>
+        <!-- <p>{{slide.text}}</p> -->
+      </div>
+    </slide>
+    <slide>
+      <img src="assets/images/3.jpeg" class="imgStyle" alt="Third slide">
+      <div class="carousel-caption">
+        <h4>Slide {{activeSlideIndex}}</h4>
+        <!-- <p>{{slide.text}}</p> -->
+      </div>
+    </slide>
+
+  </carousel>
+</div>

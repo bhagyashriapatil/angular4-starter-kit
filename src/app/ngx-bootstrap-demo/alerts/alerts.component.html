@@ -1,0 +1,36 @@
+<div class="col-sm-12">
+<div class="col-sm-6">
+  <form>
+    <div class="form-group col-sm-12">
+     <label>alert types</label>
+     <alert type="success">
+      <strong>Well done!</strong> There are four types of alerts 1.info 2.warning 3.danger
+     </alert>
+    </div>
+
+    <div class="form-group col-sm-12">
+      <label>alert-link used</label>
+        <alert type="info">
+            <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+          </alert>
+    </div>  
+    
+    <div class="form-group col-sm-12">
+       <label>alert-heading used</label>
+       <h4 class="alert-heading">Well done!</h4>
+       <p>This example text is going to run a bit longer so that spacing within an alert works with this kind of content.</p>
+    </div> 
+  </form>
+</div>
+<div class="col-sm-6">
+  <form>
+      <div class="form-group col-sm-12 text-center">
+          <label>Dismissing used here</label>
+          <div *ngFor="let alert of alerts">
+              <alert [type]="alert.type" dismissible="true">{{ alert.msg }}</alert>
+            </div>
+            <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>  
+        </div>
+  </form>
+</div>
+</div>

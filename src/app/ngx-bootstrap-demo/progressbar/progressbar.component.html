@@ -1,0 +1,31 @@
+<div class="col-sm-12">
+<div class="col-sm-6">
+  <div class="page-header col-sm-12 text-center">Usage Static</div>
+    <div class="col-sm-4">
+      <progressbar value="55"></progressbar>
+    </div>
+    <div class="col-sm-4">
+      <progressbar class="progress-striped" value="22" type="warning">22%</progressbar>
+    </div>
+    <div class="col-sm-4">
+      <progressbar class="progress-striped active" max="200" value="166" type="danger"><i>166 / 200</i></progressbar>
+    </div>
+  </div>
+    <div class="col-sm-6">
+  <div class="page-header col-sm-12 text-center">Usage Dynamic</div>
+        <progressbar [max]="max" [value]="dynamic">
+            <span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span>
+          </progressbar>
+           
+          <small><em>No animation</em></small>
+          <progressbar [animate]="false" [value]="dynamic" type="success"><b>{{dynamic}}%</b></progressbar>
+           
+          <small><em>Object (changes type based on value)</em></small>
+          <progressbar class="progress-striped active" [value]="dynamic" [type]="type">
+            {{type}} <i *ngIf="showWarning">!!!Watch out !!!</i>
+          </progressbar>
+           
+          <button type="button" class="btn btn-sm btn-primary" (click)="random()">Randomize</button>
+    </div>
+  </div>
+

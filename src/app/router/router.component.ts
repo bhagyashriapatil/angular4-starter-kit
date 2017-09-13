@@ -13,6 +13,15 @@ import { ModalComponent } from '../ngx-bootstrap-demo/modal/modal.component';
 import { TypeheadComponent } from '../ngx-bootstrap-demo/typehead/typehead.component';
 import { DatepickerComponent } from '../ngx-bootstrap-demo/datepicker/datepicker.component';
 import { CollapseComponent } from '../ngx-bootstrap-demo/collapse/collapse.component';
+import { CarouselComponent } from '../ngx-bootstrap-demo/carousel/carousel.component';
+import { AccordionComponent } from '../ngx-bootstrap-demo/accordion/accordion.component';
+import { AlertsComponent } from '../ngx-bootstrap-demo/alerts/alerts.component';
+import { ButtonComponent } from '../ngx-bootstrap-demo/button/button.component';
+import { DropdownComponent } from '../ngx-bootstrap-demo/dropdown/dropdown.component';
+import { PaginationComponent } from '../ngx-bootstrap-demo/pagination/pagination.component';
+import { ProgressbarComponent } from '../ngx-bootstrap-demo/progressbar/progressbar.component';
+import { SortableComponent } from '../ngx-bootstrap-demo/sortable/sortable.component';
+import { TabsComponent } from '../ngx-bootstrap-demo/tabs/tabs.component';
 
 import { FormvalidationComponent } from '../formvalidation/formvalidation.component';
 import { ReactiveformComponent } from '../reactiveform/reactiveform.component';
@@ -33,6 +42,15 @@ export const appRoutes: Routes = [
   { path: 'typehead', component: TypeheadComponent },
   { path: 'datepicker', component: DatepickerComponent },
   { path: 'collapse', component: CollapseComponent },
+  { path: 'carousel', component: CarouselComponent },
+  { path: 'accordion', component: AccordionComponent },
+  { path: 'alert', component: AlertsComponent },
+  { path: 'ngxbutton', component: ButtonComponent },
+  { path: 'ngxdropdown', component: DropdownComponent },
+  { path: 'pagination', component: PaginationComponent },
+  { path: 'progressbar', component: ProgressbarComponent },
+  { path: 'sortable', component: SortableComponent },
+  { path: 'tabs', component: TabsComponent },
   
   { path: 'about/:id', component: AboutComponent, canActivate: [AuthguardGuard] },
   { path: '',

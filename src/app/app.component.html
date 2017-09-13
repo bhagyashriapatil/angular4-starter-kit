@@ -13,16 +13,24 @@
          <li><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
          <li><a routerLink="/fomvalidation" routerLinkActive="active">template Driven FormValidation</a></li>
          <li><a routerLink="/reactiveform" routerLinkActive="Active">reactiveForm</a></li>
-         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" (click)="openDrpdown=!openDrpdown">Ngx Bootstrap
+         <li dropdown tooltip="dd opened using ngx-dropdown" placement="right" triggers="mouseenter:mouseleave">
+          <a dropdownToggle (click)="false">Ngx Bootstrap
           <span class="caret"></span></a>
-          <ul class="dropdown-menu dispblock" *ngIf="openDrpdown">
-            <li><a routerLink="/tooltip" routerLinkActive="Active" (click)="openDrpdown=false;">Tooltip</a></li>
-            <li><a routerLink="/modal" routerLinkActive="Active" (click)="openDrpdown=false;">Modal</a></li>
-            <li><a routerLink="/typehead" routerLinkActive="Active" (click)="openDrpdown=false;">Typehead</a></li>
-            <li><a routerLink="/datepicker" routerLinkActive="Active" (click)="openDrpdown=false;">datepicker</a></li>
-            <li><a routerLink="/collapse" routerLinkActive="Active" (click)="openDrpdown=false;">Collapse</a></li>
-            <li><a href="#">Carousel</a></li>
+          <ul *dropdownMenu class="dropdown-menu">
+            <li><a routerLink="/accordion" routerLinkActive="Active">Accordion</a></li>
+            <li><a routerLink="/alert" routerLinkActive="Active">Alert</a></li>
+            <li><a routerLink="/ngxbutton" routerLinkActive="Active">Button</a></li>
+            <li><a routerLink="/ngxdropdown" routerLinkActive="Active">Dropdown</a></li>
+            <li><a routerLink="/tooltip" routerLinkActive="Active">Tooltip</a></li>
+            <li><a routerLink="/modal" routerLinkActive="Active">Modal</a></li>
+            <li><a routerLink="/typehead" routerLinkActive="Active">Typehead</a></li>
+            <li><a routerLink="/datepicker" routerLinkActive="Active">datepicker</a></li>
+            <li><a routerLink="/collapse" routerLinkActive="Active">Collapse</a></li>
+            <li><a routerLink="/carousel" routerLinkActive="Active">Carousel</a></li>
+            <li><a routerLink="/pagination" routerLinkActive="Active">Pagination</a></li>
+            <li><a routerLink="/progressbar" routerLinkActive="Active">Progressbar</a></li>
+            <li><a routerLink="/sortable" routerLinkActive="Active">Sortable</a></li>
+            <li><a routerLink="/tabs" routerLinkActive="Active">Tabs</a></li>
           </ul>
         </li>
       </ul>

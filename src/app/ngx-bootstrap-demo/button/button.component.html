@@ -1,0 +1,40 @@
+<div class="col-sm-12">
+  <div class="col-sm-4">
+      <div class="page-header col-md-12 text-center">Single Button</div>
+      <label>Here we set true value and false value to button</label>
+      <pre class="card card-block card-header">{{singleModel}}</pre>
+      <button type="button"
+              [(ngModel)]="singleModel" btnCheckbox
+              btnCheckboxTrue="1" btnCheckboxFalse="0">
+        Single Toggle
+      </button>
+  </div>
+
+  <div class="col-sm-4">
+     <div class="col-sm-12 page-header text-center">Checkbox</div>
+     <pre class="card card-block card-header">{{checkModel | json}}</pre>
+    <div>
+      <input type="checkbox" [(ngModel)]="checkModel.left" btnCheckbox><label class="pr5">Left</label>
+      <input type="checkbox" [(ngModel)]="checkModel.middle" btnCheckbox><label class="pr5">Middle</label>
+      <input type="checkbox" [(ngModel)]="checkModel.right" btnCheckbox><label class="pr5">Right</label>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+      <div class="col-sm-12 page-header text-center">Radio and Uncheckable Radio</div>
+      <label>Here we add class.active when we checked value true<b>We can set uncheckable also</b></label>
+      <!-- <pre class="card card-block card-header">{{radioModel || 'null'}}</pre>
+      <div>
+        <input type="radio" [(ngModel)]="radioModel" btnRadio="Left"><label>Left</label>
+        <input type="radio" [(ngModel)]="radioModel" btnRadio="Middle"><label>Middle</label>
+        <input type="radio" [(ngModel)]="radioModel" btnRadio="Right"><label>Right</label>
+      </div> -->
+      <!-- <div>
+        <input type="radio" [(ngModel)]="radioModel" btnRadio="Left" uncheckable><label>Left</label>
+        <input type="radio" [(ngModel)]="radioModel" btnRadio="Middle" uncheckable><label>Middle</label>
+        <input type="radio" [(ngModel)]="radioModel" btnRadio="Right" uncheckable><label>Right</label>
+      </div> -->
+  </div>
+
+</div>
+
